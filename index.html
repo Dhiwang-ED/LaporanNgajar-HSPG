@@ -1,0 +1,1389 @@
+<html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Tanda Tangan Siswa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .table-cell { border: 1px solid #d1d5db; padding: 8px; text-align: center; }
+        .table-header { background-color: #f3f4f6; font-weight: 600; }
+        @media print {
+            .no-print { display: none; }
+            body { font-size: 12px; }
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.block{display:block}.flex{display:flex}.table-cell{display:table-cell}.grid{display:grid}.h-4{height:1rem}.min-h-screen{min-height:100vh}.w-16{width:4rem}.w-20{width:5rem}.w-8{width:2rem}.w-full{width:100%}.w-4{width:1rem}.max-w-7xl{max-width:80rem}.border-collapse{border-collapse:collapse}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.justify-center{justify-content:center}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.overflow-x-auto{overflow-x:auto}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-none{border-style:none}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-yellow-100{--tw-bg-opacity:1;background-color:rgb(254 249 195 / var(--tw-bg-opacity, 1))}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-700:hover{--tw-bg-opacity:1;background-color:rgb(126 34 206 / var(--tw-bg-opacity, 1))}.hover\:bg-red-700:hover{--tw-bg-opacity:1;background-color:rgb(185 28 28 / var(--tw-bg-opacity, 1))}.hover\:text-red-800:hover{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.focus\:bg-yellow-50:focus{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}.focus\:ring-purple-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(168 85 247 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}</style></head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto p-6 max-w-7xl">
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h1 class="text-2xl font-bold text-center text-gray-800 mb-6">
+                REKAP TANDA TANGAN SISWA TAHUN AJARAN 2024/2025
+            </h1>
+            
+            <!-- Info Guru -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Nama Guru</label>
+                    <input type="text" id="namaGuru" value="Awang Haris Prasetyo Adhi" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Mata Pelajaran</label>
+                    <input type="text" id="mapel" value="Matematika" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Bulan</label>
+                    <select id="bulan" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="Januari">Januari</option>
+                        <option value="Februari" selected="">Februari</option>
+                        <option value="Maret">Maret</option>
+                        <option value="April">April</option>
+                        <option value="Mei">Mei</option>
+                        <option value="Juni">Juni</option>
+                        <option value="Juli">Juli</option>
+                        <option value="Agustus">Agustus</option>
+                        <option value="September">September</option>
+                        <option value="Oktober">Oktober</option>
+                        <option value="November">November</option>
+                        <option value="Desember">Desember</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabel Rekap -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6 overflow-x-auto">
+            <!-- SD -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 bg-blue-100 p-2 rounded">JENJANG SD</h2>
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="table-cell w-8">No</th>
+                            <th class="table-cell">Nama Siswa</th>
+                            <th class="table-cell w-20">Minggu I</th>
+                            <th class="table-cell w-20">Minggu II</th>
+                            <th class="table-cell w-20">Minggu III</th>
+                            <th class="table-cell w-20">Minggu IV</th>
+                            <th class="table-cell w-20">Minggu V</th>
+                            <th class="table-cell w-20">Jam</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableSD"><tr>
+                    <td class="table-cell font-medium">1</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Evans" onchange="updateNamaSiswa('SD', 0, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 0, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" checked="" onchange="updateKehadiran('SD', 0, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 0, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 0, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 0, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="2" min="0" onchange="updateJam('SD', 0, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">2</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 1, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 1, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 1, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 1, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 1, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 1, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 1, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">3</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 2, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 2, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 2, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 2, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 2, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 2, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 2, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">4</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 3, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 3, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 3, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 3, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 3, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 3, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 3, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">5</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 4, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 4, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 4, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 4, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 4, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 4, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 4, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">6</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 5, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 5, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 5, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 5, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 5, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 5, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 5, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">7</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 6, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 6, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 6, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 6, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 6, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 6, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 6, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">8</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 7, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 7, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 7, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 7, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 7, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 7, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 7, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">9</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 8, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 8, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 8, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 8, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 8, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 8, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 8, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">10</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SD', 9, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 9, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 9, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 9, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 9, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SD', 9, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SD', 9, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr></tbody>
+                </table>
+            </div>
+
+            <!-- SMP -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 bg-green-100 p-2 rounded">JENJANG SMP</h2>
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="table-cell w-8">No</th>
+                            <th class="table-cell">Nama Siswa</th>
+                            <th class="table-cell w-20">Minggu I</th>
+                            <th class="table-cell w-20">Minggu II</th>
+                            <th class="table-cell w-20">Minggu III</th>
+                            <th class="table-cell w-20">Minggu IV</th>
+                            <th class="table-cell w-20">Minggu V</th>
+                            <th class="table-cell w-20">Jam</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableSMP"><tr>
+                    <td class="table-cell font-medium">1</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Rama" onchange="updateNamaSiswa('SMP', 0, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 0, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 0, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 0, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 0, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 0, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 0, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">2</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Kom Kelas 9" onchange="updateNamaSiswa('SMP', 1, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 1, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 1, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 1, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 1, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 1, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 1, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">3</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Karel" onchange="updateNamaSiswa('SMP', 2, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 2, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 2, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 2, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 2, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 2, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 2, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">4</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Sandha" onchange="updateNamaSiswa('SMP', 3, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 3, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 3, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 3, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 3, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 3, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 3, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">5</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Kom Kelas 8" onchange="updateNamaSiswa('SMP', 4, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 4, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 4, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 4, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 4, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 4, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 4, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">6</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Lionel" onchange="updateNamaSiswa('SMP', 5, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 5, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 5, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 5, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 5, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 5, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 5, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">7</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Olive" onchange="updateNamaSiswa('SMP', 6, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 6, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 6, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 6, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 6, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 6, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 6, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">8</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMP', 7, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 7, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 7, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 7, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 7, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 7, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 7, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">9</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMP', 8, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 8, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 8, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 8, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 8, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 8, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 8, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">10</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMP', 9, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 9, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 9, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 9, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 9, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMP', 9, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMP', 9, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr></tbody>
+                </table>
+            </div>
+
+            <!-- SMA -->
+            <div class="mb-8">
+                <h2 class="text-lg font-bold text-gray-800 mb-4 bg-yellow-100 p-2 rounded">JENJANG SMA</h2>
+                <table class="w-full border-collapse border border-gray-300">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="table-cell w-8">No</th>
+                            <th class="table-cell">Nama Siswa</th>
+                            <th class="table-cell w-20">Minggu I</th>
+                            <th class="table-cell w-20">Minggu II</th>
+                            <th class="table-cell w-20">Minggu III</th>
+                            <th class="table-cell w-20">Minggu IV</th>
+                            <th class="table-cell w-20">Minggu V</th>
+                            <th class="table-cell w-20">Jam</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableSMA"><tr>
+                    <td class="table-cell font-medium">1</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Komputer" onchange="updateNamaSiswa('SMA', 0, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 0, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 0, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 0, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 0, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 0, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 0, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">2</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Keyshia (2 Jam)" onchange="updateNamaSiswa('SMA', 1, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 1, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 1, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 1, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 1, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 1, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 1, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">3</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Kom Kelas 11" onchange="updateNamaSiswa('SMA', 2, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 2, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 2, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 2, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 2, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 2, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 2, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">4</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Kom Kelas 12" onchange="updateNamaSiswa('SMA', 3, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 3, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 3, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 3, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 3, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 3, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 3, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">5</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Yordan" onchange="updateNamaSiswa('SMA', 4, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 4, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 4, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 4, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 4, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 4, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 4, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">6</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Fabian Kelas" onchange="updateNamaSiswa('SMA', 5, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 5, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" checked="" onchange="updateKehadiran('SMA', 5, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 5, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 5, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 5, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="2" min="0" onchange="updateJam('SMA', 5, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">7</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Yamna" onchange="updateNamaSiswa('SMA', 6, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 6, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 6, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 6, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 6, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 6, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 6, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">8</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="Nada" onchange="updateNamaSiswa('SMA', 7, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 7, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 7, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 7, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 7, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 7, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 7, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">9</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMA', 8, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 8, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 8, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 8, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 8, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 8, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 8, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">10</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMA', 9, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 9, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 9, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 9, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 9, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 9, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 9, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">11</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMA', 10, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 10, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 10, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 10, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 10, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 10, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 10, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr><tr>
+                    <td class="table-cell font-medium">12</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="" onchange="updateNamaSiswa('SMA', 11, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 11, 0, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 11, 1, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 11, 2, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 11, 3, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                        <td class="table-cell">
+                            <input type="checkbox" onchange="updateKehadiran('SMA', 11, 4, this.checked)" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    
+                    <td class="table-cell">
+                        <input type="number" value="0" min="0" onchange="updateJam('SMA', 11, this.value)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                </tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Kolom Khusus -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 bg-purple-100 p-2 rounded">Kolom Khusus</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Jaga Asesmen Sumatif</label>
+                        <input type="text" id="jagaAsesmen" placeholder="Masukkan keterangan..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Koreksi Asesmen Sumatif</label>
+                        <input type="text" id="koreksiAsesmen" value="2 jam" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Kegiatan Lain</label>
+                        <table class="w-full border-collapse border border-gray-300 mb-4">
+                            <thead>
+                                <tr class="table-header">
+                                    <th class="table-cell">Kegiatan</th>
+                                    <th class="table-cell w-20">Jam</th>
+                                    <th class="table-cell w-16">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="kegiatanLainTable">
+                                <tr>
+                                    <td class="table-cell">
+                                        <input type="text" value="Kevin (4 pertemuan)" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                                    </td>
+                                    <td class="table-cell">
+                                        <input type="number" value="4" min="0" onchange="updateTotalTambahan()" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                                    </td>
+                                    <td class="table-cell">
+                                        <button onclick="hapusKegiatan(this)" class="text-red-600 hover:text-red-800">🗑️</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="table-cell">
+                                        <input type="text" value="Desain Buku kenangan" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                                    </td>
+                                    <td class="table-cell">
+                                        <input type="number" value="2" min="0" onchange="updateTotalTambahan()" class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                                    </td>
+                                    <td class="table-cell">
+                                        <button onclick="hapusKegiatan(this)" class="text-red-600 hover:text-red-800">🗑️</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button onclick="tambahKegiatan()" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm">
+                            ➕ Tambah Kegiatan
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-md font-semibold text-gray-700 mb-4">Total Rekapitulasi</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <div class="mb-2">
+                            <span class="font-medium">Total Jam Mengajar: </span>
+                            <span id="totalJam" class="text-blue-600 font-bold">2 jam</span>
+                        </div>
+                        <div>
+                            <span class="font-medium">Kegiatan Tambahan: </span>
+                            <span id="totalTambahan" class="text-purple-600 font-bold">4 jam</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Aksi -->
+        <div class="bg-white rounded-lg shadow-lg p-6 no-print">
+            <div class="flex flex-wrap gap-4 justify-center">
+                <button onclick="simpanData()" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    💾 Simpan Data
+                </button>
+                <button onclick="muatData()" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    📂 Muat Data
+                </button>
+                <button onclick="cetakRekap()" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    🖨️ Cetak Rekap
+                </button>
+                <button onclick="resetData()" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    🔄 Reset Data
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Data siswa default
+        const dataSiswa = {
+            SD: ['Evans', '', '', '', '', '', '', '', '', ''],
+            SMP: ['Rama', 'Kom Kelas 9', 'Karel', 'Sandha', 'Kom Kelas 8', 'Lionel', 'Olive', '', '', ''],
+            SMA: ['Komputer', 'Keyshia (2 Jam)', 'Kom Kelas 11', 'Kom Kelas 12', 'Yordan', 'Fabian Kelas', 'Yamna', 'Nada', '', '', '', '']
+        };
+
+        // Data kehadiran default
+        const dataKehadiran = {
+            SD: [
+                [false, true, false, false, false], // Evans
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false]
+            ],
+            SMP: Array(10).fill().map(() => Array(5).fill(false)),
+            SMA: [
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, true, false, false, false], // Fabian Kelas
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false],
+                [false, false, false, false, false]
+            ]
+        };
+
+        // Data jam per siswa
+        const dataJam = {
+            SD: [2, 0, 0, 0, 0, 0, 0, 0, 0, 0], // Evans 2 jam
+            SMP: Array(10).fill(0),
+            SMA: [0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0] // Fabian Kelas 2 jam
+        };
+
+        function generateTable(jenjang, containerId) {
+            const container = document.getElementById(containerId);
+            const siswaList = dataSiswa[jenjang];
+            const kehadiranList = dataKehadiran[jenjang];
+            
+            container.innerHTML = '';
+            
+            siswaList.forEach((nama, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="table-cell font-medium">${index + 1}</td>
+                    <td class="table-cell text-left">
+                        <input type="text" value="${nama}" 
+                               onchange="updateNamaSiswa('${jenjang}', ${index}, this.value)"
+                               class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                    </td>
+                    ${Array(5).fill().map((_, weekIndex) => `
+                        <td class="table-cell">
+                            <input type="checkbox" 
+                                   ${kehadiranList[index][weekIndex] ? 'checked' : ''}
+                                   onchange="updateKehadiran('${jenjang}', ${index}, ${weekIndex}, this.checked)"
+                                   class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500">
+                        </td>
+                    `).join('')}
+                    <td class="table-cell">
+                        <input type="number" 
+                               value="${dataJam[jenjang][index]}" 
+                               min="0"
+                               onchange="updateJam('${jenjang}', ${index}, this.value)"
+                               class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                    </td>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        function updateNamaSiswa(jenjang, index, nama) {
+            dataSiswa[jenjang][index] = nama;
+            updateTotalSiswa();
+        }
+
+        function updateKehadiran(jenjang, siswaIndex, mingguIndex, checked) {
+            dataKehadiran[jenjang][siswaIndex][mingguIndex] = checked;
+            updateTotalJam();
+        }
+
+        function updateJam(jenjang, siswaIndex, jam) {
+            dataJam[jenjang][siswaIndex] = parseInt(jam) || 0;
+            updateTotalJam();
+        }
+
+        function updateTotalJam() {
+            let totalJam = 0;
+            Object.keys(dataJam).forEach(jenjang => {
+                dataJam[jenjang].forEach(jam => {
+                    totalJam += jam;
+                });
+            });
+            document.getElementById('totalJam').textContent = totalJam + ' jam';
+        }
+
+        function updateTotalTambahan() {
+            let totalTambahan = 0;
+            const rows = document.querySelectorAll('#kegiatanLainTable tr');
+            rows.forEach(row => {
+                const jamInput = row.querySelector('input[type="number"]');
+                if (jamInput) {
+                    totalTambahan += parseInt(jamInput.value) || 0;
+                }
+            });
+            document.getElementById('totalTambahan').textContent = totalTambahan + ' jam';
+        }
+
+        function tambahKegiatan() {
+            const tbody = document.getElementById('kegiatanLainTable');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td class="table-cell">
+                    <input type="text" placeholder="Nama kegiatan..." 
+                           class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                </td>
+                <td class="table-cell">
+                    <input type="number" value="0" min="0" 
+                           onchange="updateTotalTambahan()"
+                           class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                </td>
+                <td class="table-cell">
+                    <button onclick="hapusKegiatan(this)" class="text-red-600 hover:text-red-800">🗑️</button>
+                </td>
+            `;
+            tbody.appendChild(newRow);
+        }
+
+        function hapusKegiatan(button) {
+            if (confirm('Hapus kegiatan ini?')) {
+                button.closest('tr').remove();
+                updateTotalTambahan();
+            }
+        }
+
+        function simpanData() {
+            // Simpan data kegiatan lain
+            const kegiatanLainData = [];
+            const rows = document.querySelectorAll('#kegiatanLainTable tr');
+            rows.forEach(row => {
+                const namaInput = row.querySelector('input[type="text"]');
+                const jamInput = row.querySelector('input[type="number"]');
+                if (namaInput && jamInput) {
+                    kegiatanLainData.push({
+                        nama: namaInput.value,
+                        jam: parseInt(jamInput.value) || 0
+                    });
+                }
+            });
+
+            const data = {
+                namaGuru: document.getElementById('namaGuru').value,
+                mapel: document.getElementById('mapel').value,
+                bulan: document.getElementById('bulan').value,
+                dataSiswa: dataSiswa,
+                dataKehadiran: dataKehadiran,
+                dataJam: dataJam,
+                jagaAsesmen: document.getElementById('jagaAsesmen').value,
+                koreksiAsesmen: document.getElementById('koreksiAsesmen').value,
+                kegiatanLain: kegiatanLainData
+            };
+            
+            localStorage.setItem('rekapSiswa', JSON.stringify(data));
+            alert('✅ Data berhasil disimpan!');
+        }
+
+        function muatData() {
+            const savedData = localStorage.getItem('rekapSiswa');
+            if (savedData) {
+                const data = JSON.parse(savedData);
+                
+                document.getElementById('namaGuru').value = data.namaGuru || '';
+                document.getElementById('mapel').value = data.mapel || '';
+                document.getElementById('bulan').value = data.bulan || 'Februari';
+                document.getElementById('jagaAsesmen').value = data.jagaAsesmen || '';
+                document.getElementById('koreksiAsesmen').value = data.koreksiAsesmen || '';
+                
+                if (data.dataSiswa) {
+                    Object.assign(dataSiswa, data.dataSiswa);
+                }
+                if (data.dataKehadiran) {
+                    Object.assign(dataKehadiran, data.dataKehadiran);
+                }
+                if (data.dataJam) {
+                    Object.assign(dataJam, data.dataJam);
+                }
+                
+                // Muat kegiatan lain
+                if (data.kegiatanLain) {
+                    const tbody = document.getElementById('kegiatanLainTable');
+                    tbody.innerHTML = '';
+                    data.kegiatanLain.forEach(kegiatan => {
+                        const newRow = document.createElement('tr');
+                        newRow.innerHTML = `
+                            <td class="table-cell">
+                                <input type="text" value="${kegiatan.nama}" 
+                                       class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded">
+                            </td>
+                            <td class="table-cell">
+                                <input type="number" value="${kegiatan.jam}" min="0" 
+                                       onchange="updateTotalTambahan()"
+                                       class="w-full border-none bg-transparent focus:outline-none focus:bg-yellow-50 px-2 py-1 rounded text-center">
+                            </td>
+                            <td class="table-cell">
+                                <button onclick="hapusKegiatan(this)" class="text-red-600 hover:text-red-800">🗑️</button>
+                            </td>
+                        `;
+                        tbody.appendChild(newRow);
+                    });
+                }
+                
+                initializeTables();
+                alert('✅ Data berhasil dimuat!');
+            } else {
+                alert('❌ Tidak ada data tersimpan!');
+            }
+        }
+
+        function cetakRekap() {
+            window.print();
+        }
+
+        function resetData() {
+            if (confirm('⚠️ Apakah Anda yakin ingin mereset semua data?')) {
+                localStorage.removeItem('rekapSiswa');
+                location.reload();
+            }
+        }
+
+        function initializeTables() {
+            generateTable('SD', 'tableSD');
+            generateTable('SMP', 'tableSMP');
+            generateTable('SMA', 'tableSMA');
+            updateTotalJam();
+            updateTotalTambahan();
+        }
+
+        // Initialize saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTables();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'95fe3c3ff285f7e6',t:'MTc1MjYzNDY4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe>
+
+</body></html>
